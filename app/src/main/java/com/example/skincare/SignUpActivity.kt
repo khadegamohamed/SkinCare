@@ -67,7 +67,7 @@ class SignUpActivity : AppCompatActivity() {
 
         // checking minimum password Length
         if (etPassword.text.length < MIN_PASSWORD_LENGTH) {
-            etPassword.setError("Password Length must be more than " + MIN_PASSWORD_LENGTH + "characters")
+            etPassword.setError("Password Length must be more than " + MIN_PASSWORD_LENGTH + " characters")
             return false
         }
 

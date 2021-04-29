@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="100dp"
+        android:text="viola"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="#373d55"
+        android:id="@+id/tv1"
+        />
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/ed1"
+        android:hint="email"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ed2"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed2"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        android:background="#FF3700B3"
+        android:textSize="20dp"
+        android:textColor="#f5ddd5"
+        android:id="@+id/btn1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn1"
+        android:id="@+id/tv2"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Creat account"
+        android:textSize="20dp"
+        android:textColor="#373d55"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:id="@+id/tv3"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="SignUp"
+        android:textSize="20dp"
+        android:textColor="#373d55"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -17,12 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Toast.makeText(this,"welcome",Toast.LENGTH_LONG).show()
         initViews()
+        openDrawer()
 
+
+
+    }
+
+    private fun openDrawer() {
         toggle = ActionBarDrawerToggle(this,drawerLayouyt,R.string.open,R.string.close)
         drawerLayouyt.addDrawerListener(toggle)
         toggle.syncState()
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
         navigationView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.logout_item ->
@@ -37,7 +44,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         drawerLayouyt = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view) }
+        navigationView = findViewById(R.id.nav_view)
+
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item)){

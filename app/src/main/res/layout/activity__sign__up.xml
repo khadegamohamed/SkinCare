@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sign_Up"
+    tools:context=".Activity_Sign_Up"
     android:background="@color/Beige">
     <TextView
         android:id="@+id/tv_heading"
@@ -113,6 +113,7 @@
         android:textSize="20dp"
         android:background="@color/baby_blue"
         />
+
 
 
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Log_In"
+    tools:context=".Activity_Log_In"
     android:background="@color/Beige">
     <TextView
         android:layout_width="wrap_content"
@@ -61,6 +61,7 @@
         android:textColor="@color/new_black"
         android:background="@color/Beige"
         />
+
 
 
 </RelativeLayout>

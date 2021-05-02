@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 
 
-class Sign_Up : AppCompatActivity() {
+class Activity_Sign_Up : AppCompatActivity() {
     lateinit var etFirstName: EditText
     lateinit var etLastName:EditText
     lateinit var etEmail: EditText
@@ -18,10 +18,9 @@ class Sign_Up : AppCompatActivity() {
     val MIN_PASSWORD_LENGTH = 6;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign__up)
+        setContentView(R.layout.activity__sign__up)
         viewInitializations()
     }
-
     fun viewInitializations() {
         etFirstName = findViewById(R.id.et_first_name)
         etLastName = findViewById(R.id.et_last_name)

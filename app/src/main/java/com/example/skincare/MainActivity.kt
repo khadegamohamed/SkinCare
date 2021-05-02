@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.skincare.ui.main.ClincsFragment
@@ -67,7 +68,9 @@ class MainActivity : AppCompatActivity() {
         adepter.addfragments(ToBuyFragment(),"Tobuy")
         viewPager.adapter =adepter
         tabLayout.setupWithViewPager(viewPager)
-
+        tabLayout.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_calendar_today_24)
+        tabLayout.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_alarm_24)
+        tabLayout.getTabAt(2)!!.setIcon(R.drawable.ic_baseline_filter_drama_24)
 
     }
 

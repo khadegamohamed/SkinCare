@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDECE5"
+    tools:context=".ToBuyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/IMGitem"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="105dp"
+        android:hint="adress"
+        android:textSize="30dp"
+        android:id="@+id/ed1"
+
+        />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="105dp"
+        android:hint="phone"
+        android:textSize="30dp"
+        android:id="@+id/ed2"
+
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:id="@+id/btn1"
+        android:background="#D0E6F3"
+        android:text="buy"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="125dp"/>
+
+
+</FrameLayout>

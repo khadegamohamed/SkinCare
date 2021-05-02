@@ -13,6 +13,7 @@ class ToBuyFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
 
+
         }
     }
 

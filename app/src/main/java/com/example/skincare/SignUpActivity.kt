@@ -6,6 +6,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var etFirstName: EditText

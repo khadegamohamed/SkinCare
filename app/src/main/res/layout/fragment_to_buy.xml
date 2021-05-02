@@ -39,7 +39,7 @@
         android:background="#D0E6F3"
         android:text="buy"
         android:textSize="30dp"
-        android:textColor="@color/black"
+        android:textColor="@color/new_black"
         android:layout_marginTop="400dp"
         android:layout_marginLeft="125dp"/>
 

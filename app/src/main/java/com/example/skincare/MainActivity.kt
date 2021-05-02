@@ -6,7 +6,9 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.skincare.ui.main.ClincsFragment
 import com.google.android.material.navigation.NavigationView
+import com.pageradepter
 
 class MainActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this,"welcome",Toast.LENGTH_LONG).show()
         initViews()
         openDrawer()
-
+      setuptabs()
 
 
     }
@@ -54,5 +56,14 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+    private fun setuptabs(){
+        val adepter = pageradepter(supportFragmentManager)
+        adepter.addfragments(ClincsFragment(),"Clincs")
+        adepter.addfragments(RoutienFragment(),"Routien")
+        adepter.addfragments(ToBuyFragment(),"Tobuy")
+
+    }
+
+
 
 }

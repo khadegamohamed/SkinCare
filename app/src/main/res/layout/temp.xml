@@ -33,7 +33,6 @@
             android:id="@+id/TEXrec2"
             app:layout_constraintBottom_toBottomOf="@id/TEXrec1"
             app:layout_constraintLeft_toRightOf="@id/IMGrec"
-
             android:textSize="36dp"
             android:layout_width="236dp"
             android:layout_height="16dp"/>

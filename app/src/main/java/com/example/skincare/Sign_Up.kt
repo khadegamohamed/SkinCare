@@ -6,9 +6,9 @@ import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 
-class SignUpActivity : AppCompatActivity() {
+
+class Sign_Up : AppCompatActivity() {
     lateinit var etFirstName: EditText
     lateinit var etLastName:EditText
     lateinit var etEmail: EditText
@@ -18,7 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     val MIN_PASSWORD_LENGTH = 6;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        setContentView(R.layout.activity_sign__up)
         viewInitializations()
     }
 

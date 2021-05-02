@@ -13,8 +13,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 
-
-class Log_InActivity : AppCompatActivity() {
+class Log_In : AppCompatActivity() {
 
     lateinit var tv1:TextView
     lateinit var ed_email:EditText
@@ -24,7 +23,7 @@ class Log_InActivity : AppCompatActivity() {
     val MIN_PASSWORD_LENGTH = 6;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log__in)
+        setContentView(R.layout.activity_log__in2)
         tv1=findViewById(R.id.tv1)
         ed_email=findViewById(R.id.ed_email)
         ed_password=findViewById(R.id.ed_password)
@@ -33,7 +32,7 @@ class Log_InActivity : AppCompatActivity() {
 
         bt_singUp.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                intent = Intent(this@Log_InActivity, SignUpActivity::class.java)
+                intent = Intent(this@Log_In, Sign_Up::class.java)
                 startActivity(intent)
             }
         })
@@ -43,7 +42,7 @@ class Log_InActivity : AppCompatActivity() {
                 if(validateInput1()){
                     val email = ed_email.text.toString()
                     val password = ed_password.text.toString()
-                    Toast.makeText(this@Log_InActivity,"Login Success",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Log_In,"Login Success",Toast.LENGTH_SHORT).show()
                     // Here you can call you API
                 }
             }
@@ -79,6 +78,8 @@ class Log_InActivity : AppCompatActivity() {
     }
 
 }
+
+
 
 
 

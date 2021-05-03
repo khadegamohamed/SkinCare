@@ -10,7 +10,7 @@
     android:background="@color/design_default_color_primary"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/ic_launcher_round"

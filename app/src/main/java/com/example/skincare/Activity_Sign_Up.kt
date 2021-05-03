@@ -1,9 +1,11 @@
 package com.example.skincare
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
@@ -15,11 +17,30 @@ class Activity_Sign_Up : AppCompatActivity() {
     lateinit var etPassword:EditText
     lateinit var etRepeatPassword:EditText
     lateinit var etCity:EditText
+    lateinit var bt_register:Button
     val MIN_PASSWORD_LENGTH = 6;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity__sign__up)
+        bt_register=findViewById(R.id.bt_register)
         viewInitializations()
+        bt_register.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                if(validateInput()){
+                    val firstName = etFirstName.text.toString()
+                    val lastName = etLastName.text.toString()
+                    val email = etEmail.text.toString()
+                    val password = etPassword.text.toString()
+                    val repeatPassword = etRepeatPassword.text.toString()
+
+                    Toast.makeText(this@Activity_Sign_Up,"Login Success",Toast.LENGTH_SHORT).show()
+                    intent = Intent(this@Activity_Sign_Up, MainActivity::class.java)
+                    startActivity(intent)
+                    // Here you can call you API
+
+                }
+            }
+        })
     }
     fun viewInitializations() {
         etFirstName = findViewById(R.id.et_first_name)
@@ -85,21 +106,7 @@ class Activity_Sign_Up : AppCompatActivity() {
 
     // Hook Click Event
 
-    fun performSignUp (view: View) {
-        if (validateInput()) {
 
-            // Input is valid, here send data to your server
 
-            val firstName = etFirstName.text.toString()
-            val lastName = etLastName.text.toString()
-            val email = etEmail.text.toString()
-            val password = etPassword.text.toString()
-            val repeatPassword = etRepeatPassword.text.toString()
-
-            Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show()
-            // Here you can call you API
-
-        }
-    }
 
 }

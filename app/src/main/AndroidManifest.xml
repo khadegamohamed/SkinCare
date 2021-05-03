@@ -12,7 +12,7 @@
         <activity android:name=".Activity_Sign_Up"></activity>
         <activity android:name=".Activity_Log_In" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" > </activity>
         <activity
             android:name=".splashscreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

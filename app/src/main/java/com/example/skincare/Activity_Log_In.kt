@@ -41,7 +41,10 @@ class Activity_Log_In : AppCompatActivity() {
                     val email = ed_email.text.toString()
                     val password = ed_password.text.toString()
                     Toast.makeText(this@Activity_Log_In,"Login Success",Toast.LENGTH_SHORT).show()
-                    // Here you can call you API
+                    intent = Intent(this@Activity_Log_In, MainActivity::class.java)
+                    startActivity(intent)
+                // Here you can call you API
+
                 }
             }
         })

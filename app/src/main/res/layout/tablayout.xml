@@ -11,12 +11,12 @@
 
 
     <com.google.android.material.tabs.TabLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:tabGravity="fill"
-   app:tabTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabTextColor="@color/white"
         android:id="@+id/tabs"
-    app:tabSelectedTextColor="@color/new_black"
+        app:tabSelectedTextColor="@color/new_black"
         app:tabMode="fixed"
     />
 </com.google.android.material.appbar.AppBarLayout>

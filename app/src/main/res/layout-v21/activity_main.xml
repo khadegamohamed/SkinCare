@@ -10,17 +10,11 @@
     android:layout_gravity="left"
     android:fitsSystemWindows="true"
     tools:openDrawer="left">
- 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-<include
-    layout="@layout/tablayout"
-    />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -30,4 +24,5 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_drawer_menu"
         />
+
 </androidx.drawerlayout.widget.DrawerLayout>

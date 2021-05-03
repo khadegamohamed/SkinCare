@@ -22,25 +22,23 @@ class Activity_Sign_Up : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity__sign__up)
-        bt_register=findViewById(R.id.bt_register)
+        bt_register = findViewById(R.id.bt_register)
         viewInitializations()
-        bt_register.setOnClickListener(object :View.OnClickListener {
-            override fun onClick(v: View?) {
-                if(validateInput()){
-                    val firstName = etFirstName.text.toString()
-                    val lastName = etLastName.text.toString()
-                    val email = etEmail.text.toString()
-                    val password = etPassword.text.toString()
-                    val repeatPassword = etRepeatPassword.text.toString()
+        bt_register.setOnClickListener {
+            if (validateInput()) {
+                val firstName = etFirstName.text.toString()
+                val lastName = etLastName.text.toString()
+                val email = etEmail.text.toString()
+                val password = etPassword.text.toString()
+                val repeatPassword = etRepeatPassword.text.toString()
 
-                    Toast.makeText(this@Activity_Sign_Up,"Login Success",Toast.LENGTH_SHORT).show()
-                    intent = Intent(this@Activity_Sign_Up, MainActivity::class.java)
-                    startActivity(intent)
-                    // Here you can call you API
-
-                }
+                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                // Here you can call you API
             }
-        })
+        }
+
     }
     fun viewInitializations() {
         etFirstName = findViewById(R.id.et_first_name)
@@ -81,10 +79,7 @@ class Activity_Sign_Up : AppCompatActivity() {
         }
 
         // checking the proper email format
-        if (!isEmailValid(etEmail.text.toString())) {
-            etEmail.setError("Please Enter Valid Email")
-            return false
-        }
+
 
         // checking minimum password Length
         if (etPassword.text.length < MIN_PASSWORD_LENGTH) {

@@ -5,13 +5,21 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.viewpager.widget.ViewPager
+import com.example.skincare.ui.main.ClincsFragment
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
+
+import com.pageradepter
 
 class MainActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayouyt: DrawerLayout
     lateinit var navigationView: NavigationView
+    lateinit var viewpager : ViewPager
+    lateinit var tablayout: TabLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         initViews()
         openDrawer()
 
+       // setuptabs()
 
 
     }
@@ -45,6 +54,9 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         drawerLayouyt = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
+       // tablayout = findViewById(R.id.tabs)
+      // viewpager = findViewById(R.id.viewpager)
+
 
     }
 
@@ -54,5 +66,19 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+    private fun setuptabs(){
+        val adepter = pageradepter(supportFragmentManager)
+        adepter.addfragments(ClincsFragment(),"Clincs")
+        adepter.addfragments(RoutienFragment(),"Routien")
+        adepter.addfragments(ToBuyFragment(),"Tobuy")
+        viewpager.adapter =adepter
+        tablayout.setupWithViewPager(viewpager)
+        tablayout.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_calendar_today_24)
+        tablayout.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_alarm_24)
+        tablayout.getTabAt(2)!!.setIcon(R.drawable.ic_baseline_filter_drama_24)
+
+    }
+
+
 
 }

@@ -16,7 +16,7 @@
     app:tabGravity="fill"
    app:tabTextColor="@color/white"
         android:id="@+id/tabs"
-    app:tabSelectedTextColor="@color/black"
+    app:tabSelectedTextColor="@color/new_black"
         app:tabMode="fixed"
     />
 </com.google.android.material.appbar.AppBarLayout>

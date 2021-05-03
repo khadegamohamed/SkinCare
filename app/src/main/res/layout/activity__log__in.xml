@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Log_In"
+    android:background="@color/Beige">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100dp"
+        android:text="viola"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="#373d55"
+        android:id="@+id/tv1"
+        />
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/ed_email"
+        android:hint="email"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_email"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ed_password"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_password"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        android:background="@color/baby_blue"
+        android:textSize="20dp"
+        android:textColor="@color/Bold_Beige"
+        android:id="@+id/bt_Login"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_Login"
+        android:id="@+id/bt_singUp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="SignUp"
+        android:textSize="20dp"
+        android:textColor="@color/new_black"
+        android:background="@color/Beige"
+        />
+
+
+
+</RelativeLayout>

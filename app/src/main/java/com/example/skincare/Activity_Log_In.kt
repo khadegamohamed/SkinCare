@@ -28,26 +28,22 @@ class Activity_Log_In : AppCompatActivity() {
         bt_Login=findViewById(R.id.bt_Login)
         bt_singUp=findViewById(R.id.bt_singUp)
 
-        bt_singUp.setOnClickListener(object :View.OnClickListener {
-            override fun onClick(v: View?) {
-               val intent = Intent(this@Activity_Log_In, Activity_Sign_Up::class.java)
-                startActivity(intent)
-            }
-        })
+        bt_singUp.setOnClickListener {
+            val intent = Intent(this@Activity_Log_In, Activity_Sign_Up::class.java)
+            startActivity(intent)
+        }
 
-        bt_Login.setOnClickListener(object :View.OnClickListener {
-            override fun onClick(v: View?) {
-                if(validateInput1()){
-                    val email = ed_email.text.toString()
-                    val password = ed_password.text.toString()
-                    Toast.makeText(this@Activity_Log_In,"Login Success",Toast.LENGTH_SHORT).show()
-                   val intent = Intent(this@Activity_Log_In, MainActivity::class.java)
-                    startActivity(intent)
+        bt_Login.setOnClickListener {
+            if (validateInput1()) {
+                val email = ed_email.text.toString()
+                val password = ed_password.text.toString()
+                Toast.makeText(this@Activity_Log_In, "Login Success", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@Activity_Log_In, MainActivity::class.java)
+                startActivity(intent)
                 // Here you can call you API
 
-                }
             }
-        })
+        }
 
 
     }

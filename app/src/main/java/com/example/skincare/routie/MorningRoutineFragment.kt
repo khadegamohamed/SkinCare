@@ -1,17 +1,25 @@
-package com.example.skincare
+package com.example.skincare.routie
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.skincare.R
 
-class RoutienFragment : Fragment() {
+
+class MorningRoutineFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_routien, container, false)
+        return inflater.inflate(R.layout.fragment_morning_routiene, container, false)
     }
 
-    }
+
+}

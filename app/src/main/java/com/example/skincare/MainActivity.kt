@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager.widget.ViewPager
+import com.example.skincare.databinding.ActivityMainBinding
+import com.example.skincare.routie.RoutineFragment
 import com.example.skincare.ui.main.ClincsFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
@@ -14,6 +16,7 @@ import com.google.android.material.tabs.TabLayout
 import com.pageradepter
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayouyt: DrawerLayout
     lateinit var navigationView: NavigationView
@@ -21,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var tablayout: TabLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         Toast.makeText(this, "welcome", Toast.LENGTH_LONG).show()
         initViews()
         openDrawer()
@@ -69,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     private fun setuptabs() {
         val adepter = pageradepter(supportFragmentManager)
         adepter.addfragments(ClincsFragment(), "Clincs")
-        adepter.addfragments(RoutienFragment(), "Routien")
+        adepter.addfragments(RoutineFragment(), "Routien")
         adepter.addfragments(ToBuyFragment(), "Tobuy")
         viewpager.adapter = adepter
         tablayout.setupWithViewPager(viewpager)

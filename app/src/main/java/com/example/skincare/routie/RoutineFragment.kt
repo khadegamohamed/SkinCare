@@ -15,25 +15,31 @@ import com.google.android.material.tabs.TabLayout
 class RoutineFragment : Fragment() {
     lateinit var binding: FragmentRoutienBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentRoutienBinding.inflate(layoutInflater)
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
         super.onActivityCreated(savedInstanceState)
-         setUpTabs()
+        setUpTabs()
 
     }
 
     private fun setUpTabs() {
         val adapter = RoutinePagerAdapter(requireActivity().supportFragmentManager)
         Log.e("TAG", "setUpTabs: ")
-        adapter.addFragments(MorningRoutineFragment(),"DAY")
-        adapter.addFragments(EveningRoutineFragment(),"NIGHT")
+        adapter.addFragments(MorningRoutineFragment(), "DAY")
+        adapter.addFragments(EveningRoutineFragment(), "NIGHT")
         binding.viewPagerId.adapter = adapter
+
+        binding.tabLayoutId.setupWithViewPager(binding.viewPagerId)
         binding.tabLayoutId.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_wb_sunny_24)
         binding.tabLayoutId.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_nights_stay_24)
 
